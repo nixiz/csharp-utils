@@ -315,13 +315,13 @@
             this.rb1_master_3.Name = "rb1_master_3";
             this.rb1_master_3.Size = new System.Drawing.Size(91, 17);
             this.rb1_master_3.TabIndex = 2;
-            this.rb1_master_3.TabStop = true;
             this.rb1_master_3.Text = "radioButton13";
             this.rb1_master_3.UseVisualStyleBackColor = true;
             // 
             // rb1_master_2
             // 
             this.rb1_master_2.AutoSize = true;
+            this.rb1_master_2.Checked = true;
             this.rb1_master_2.Location = new System.Drawing.Point(6, 42);
             this.rb1_master_2.Name = "rb1_master_2";
             this.rb1_master_2.Size = new System.Drawing.Size(91, 17);
@@ -337,7 +337,7 @@
             this.rb1_master_1.Name = "rb1_master_1";
             this.rb1_master_1.Size = new System.Drawing.Size(91, 17);
             this.rb1_master_1.TabIndex = 0;
-            this.rb1_master_1.TabStop = true;
+            this.rb1_master_1.Tag = "0";
             this.rb1_master_1.Text = "radioButton11";
             this.rb1_master_1.UseVisualStyleBackColor = true;
             // 
@@ -360,13 +360,13 @@
             this.rb2_master_3.Name = "rb2_master_3";
             this.rb2_master_3.Size = new System.Drawing.Size(91, 17);
             this.rb2_master_3.TabIndex = 2;
-            this.rb2_master_3.TabStop = true;
             this.rb2_master_3.Text = "radioButton23";
             this.rb2_master_3.UseVisualStyleBackColor = true;
             // 
             // rb2_master_2
             // 
             this.rb2_master_2.AutoSize = true;
+            this.rb2_master_2.Checked = true;
             this.rb2_master_2.Location = new System.Drawing.Point(6, 42);
             this.rb2_master_2.Name = "rb2_master_2";
             this.rb2_master_2.Size = new System.Drawing.Size(91, 17);
@@ -382,7 +382,7 @@
             this.rb2_master_1.Name = "rb2_master_1";
             this.rb2_master_1.Size = new System.Drawing.Size(91, 17);
             this.rb2_master_1.TabIndex = 0;
-            this.rb2_master_1.TabStop = true;
+            this.rb2_master_1.Tag = "0";
             this.rb2_master_1.Text = "radioButton21";
             this.rb2_master_1.UseVisualStyleBackColor = true;
             // 
@@ -405,13 +405,13 @@
             this.rb3_slave_3.Name = "rb3_slave_3";
             this.rb3_slave_3.Size = new System.Drawing.Size(91, 17);
             this.rb3_slave_3.TabIndex = 2;
-            this.rb3_slave_3.TabStop = true;
             this.rb3_slave_3.Text = "radioButton33";
             this.rb3_slave_3.UseVisualStyleBackColor = true;
             // 
             // rb3_slave_2
             // 
             this.rb3_slave_2.AutoSize = true;
+            this.rb3_slave_2.Checked = true;
             this.rb3_slave_2.Location = new System.Drawing.Point(6, 42);
             this.rb3_slave_2.Name = "rb3_slave_2";
             this.rb3_slave_2.Size = new System.Drawing.Size(91, 17);
@@ -427,7 +427,7 @@
             this.rb3_slave_1.Name = "rb3_slave_1";
             this.rb3_slave_1.Size = new System.Drawing.Size(91, 17);
             this.rb3_slave_1.TabIndex = 0;
-            this.rb3_slave_1.TabStop = true;
+            this.rb3_slave_1.Tag = "0";
             this.rb3_slave_1.Text = "radioButton31";
             this.rb3_slave_1.UseVisualStyleBackColor = true;
             // 
@@ -450,13 +450,13 @@
             this.rb4_slave_3.Name = "rb4_slave_3";
             this.rb4_slave_3.Size = new System.Drawing.Size(91, 17);
             this.rb4_slave_3.TabIndex = 2;
-            this.rb4_slave_3.TabStop = true;
             this.rb4_slave_3.Text = "radioButton43";
             this.rb4_slave_3.UseVisualStyleBackColor = true;
             // 
             // rb4_slave_2
             // 
             this.rb4_slave_2.AutoSize = true;
+            this.rb4_slave_2.Checked = true;
             this.rb4_slave_2.Location = new System.Drawing.Point(6, 42);
             this.rb4_slave_2.Name = "rb4_slave_2";
             this.rb4_slave_2.Size = new System.Drawing.Size(91, 17);
@@ -472,7 +472,7 @@
             this.rb4_slave_1.Name = "rb4_slave_1";
             this.rb4_slave_1.Size = new System.Drawing.Size(91, 17);
             this.rb4_slave_1.TabIndex = 0;
-            this.rb4_slave_1.TabStop = true;
+            this.rb4_slave_1.Tag = "0";
             this.rb4_slave_1.Text = "radioButton41";
             this.rb4_slave_1.UseVisualStyleBackColor = true;
             // 

@@ -21,7 +21,10 @@ namespace CSUtilsUsageExamples
         private void Form1_Load(object sender, EventArgs e)
         {
             this.MakeAll<CheckBox>(cb => cb.Checked = true);
-            //var listOfEnabledTextBoxes = this.GetAll<TextBox>().Where(tb => tb.Enabled);
+            foreach (RadioButton rb in this.GetAll<RadioButton>().Where(r => r.Tag.Parse<int>() == 0))
+            {
+                rb.Checked = true;
+            }
         }
 
         private void bt_shift_names_basic_Click(object sender, EventArgs e)
