@@ -39,9 +39,6 @@ namespace CSUtils
             List<LinkObjBinder> ret;
             if (!LinkInfoTable.TryGetValue(obj, out ret))
             {
-                //PropertyInfo propertyName = obj.GetType().GetProperty("Name");
-                //string exceptionMessage = string.Format("object {0} not found", propertyName.GetValue(obj).ToString());
-                //throw new KeyNotFoundException(exceptionMessage);
                 ret = new List<LinkObjBinder>(); // create&return empty list instead of throwing an exception.
             }
             return ret;
@@ -49,42 +46,34 @@ namespace CSUtils
 
         internal static bool RemoveLink<T>(this T obj)
         {
-            try
-            {
-                var binderObjlist = GetLinkInfo(obj);
-                Type t = obj.GetType();
+            var binderObjlist = GetLinkInfo(obj);
+            Type t = obj.GetType();
 
-                foreach (var binderObj in binderObjlist)
+            foreach (var binderObj in binderObjlist)
+            {
+                // check if property exists
+                PropertyInfo propInfo = t.GetProperty(binderObj.Property);
+                // get event handler if there is a change event for given property item
+                EventInfo evInfo = t.GetEvent(string.Format("{0}Changed", binderObj.Property));
+
+                evInfo.RemoveEventHandler(obj, Delegate.CreateDelegate(evInfo.EventHandlerType, binderObj, "OnEventHandle"));
+                foreach (var item in binderObj.LinkedObjects)
                 {
-                    // check if property exists
-                    PropertyInfo propInfo = t.GetProperty(binderObj.Property);
-                    // get event handler if there is a change event for given property item
-                    EventInfo evInfo = t.GetEvent(string.Format("{0}Changed", binderObj.Property));
-
-                    evInfo.RemoveEventHandler(obj, Delegate.CreateDelegate(evInfo.EventHandlerType, binderObj, "OnEventHandle"));
-                    foreach (var item in binderObj.LinkedObjects)
+                    var binderObjLinkedList = GetLinkInfo(item);
+                    foreach (var binderObjLinked in binderObjLinkedList)
                     {
-                        var binderObjLinkedList = GetLinkInfo(item);
-                        foreach (var binderObjLinked in binderObjLinkedList)
-                        {
-                            // get event handler if there is a change event for given property item
-                            EventInfo evInfoLinked = item.GetType().GetEvent(string.Format("{0}Changed", binderObjLinked.Property));
+                        // get event handler if there is a change event for given property item
+                        EventInfo evInfoLinked = item.GetType().GetEvent(string.Format("{0}Changed", binderObjLinked.Property));
 
-                            evInfoLinked.RemoveEventHandler(item, Delegate.CreateDelegate(evInfoLinked.EventHandlerType, binderObjLinked, "OnEventHandle"));
-                        }
-                        bool result = LinkInfoTable.Remove(item);
-                        Console.WriteLine("{0}", result);
+                        evInfoLinked.RemoveEventHandler(item, Delegate.CreateDelegate(evInfoLinked.EventHandlerType, binderObjLinked, "OnEventHandle"));
                     }
+                    bool result = LinkInfoTable.Remove(item);
+                    Console.WriteLine("{0}", result);
                 }
+            }
 
-                bool res = LinkInfoTable.Remove(obj);
-                return res;
-            }
-            catch (KeyNotFoundException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
+            bool res = LinkInfoTable.Remove(obj);
+            return res;
         }
 
         internal static void CreatelinkWithInfo<T>(this T obj, LinkObjBinder linkInfo)

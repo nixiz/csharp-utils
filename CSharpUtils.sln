@@ -10,10 +10,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSUtilsUsageExamples", "CSUtilsUsageExamples\CSUtilsUsageExamples.csproj", "{597E9186-4C6E-4479-AEFB-E23ABCBA4EA6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{21B11940-63FD-4B55-82DC-D2BF23E17DDE} = {21B11940-63FD-4B55-82DC-D2BF23E17DDE}
+		{57680E8D-40CC-413F-822B-732681184F17} = {57680E8D-40CC-413F-822B-732681184F17}
 		{CB0C5695-E7D3-4D85-B4BB-3E8C275DD8E8} = {CB0C5695-E7D3-4D85-B4BB-3E8C275DD8E8}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ButtonEnumerator", "ButtonEnumerator\ButtonEnumerator.csproj", "{ACFC5884-9648-4D8E-AFD6-2B257C116E67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildAll", "BuildAll\BuildAll.csproj", "{57680E8D-40CC-413F-822B-732681184F17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +40,10 @@ Global
 		{ACFC5884-9648-4D8E-AFD6-2B257C116E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACFC5884-9648-4D8E-AFD6-2B257C116E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACFC5884-9648-4D8E-AFD6-2B257C116E67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57680E8D-40CC-413F-822B-732681184F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57680E8D-40CC-413F-822B-732681184F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57680E8D-40CC-413F-822B-732681184F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57680E8D-40CC-413F-822B-732681184F17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
