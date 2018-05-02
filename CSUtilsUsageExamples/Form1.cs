@@ -20,13 +20,17 @@ namespace CSUtilsUsageExamples
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // sample usage of MakeAll<T> extension to make all checkboxes checked: true on initialization
             this.MakeAll<CheckBox>(cb => cb.Checked = true);
+
+            // sample usage of GetAll<T> extension to select all radiobuttons which are defaulted by their tag
             foreach (RadioButton rb in this.GetAll<RadioButton>().Where(r => r.Tag.Parse<int>() == 0))
             {
                 rb.Checked = true;
             }
         }
 
+        #region Button Enumerator Example
         private void bt_shift_names_basic_Click(object sender, EventArgs e)
         {
             Button bt = sender as Button;
@@ -52,7 +56,9 @@ namespace CSUtilsUsageExamples
                 Console.WriteLine("new color is {0}", newColor.Name);
             });
         }
+        #endregion
 
+        #region MakeAll<T> Example
         private void rb_txt_bold_CheckedChanged(object sender, EventArgs e)
         {
             Console.WriteLine("RB: {0}  Checked {1}", (sender as RadioButton).Text, (sender as RadioButton).Checked);
@@ -65,12 +71,16 @@ namespace CSUtilsUsageExamples
                 c.Font = new Font(rb.Font.Name, rb.Font.Size, newFontStyle);
             });
         }
+        #endregion
 
+        #region GetAll<T> Example
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
             tb_num_of_chked_boxes.Text = this.GetAll<CheckBox>().Where(cb => cb.Checked == true).Count().ToString();
         }
+        #endregion
 
+        #region Link Unlink Example
         private void bt_link_unlink_Click(object sender, EventArgs e)
         {
             Button bt = sender as Button;
@@ -104,5 +114,6 @@ namespace CSUtilsUsageExamples
             rb1_master_2.UnLink();
             rb1_master_3.UnLink();
         }
+        #endregion
     }
 }
