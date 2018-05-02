@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CSUtils
+namespace CSUtils.ControlEnumeratorExtension
 {
-    using System.Windows.Forms;
+    using ConvertExtension;
+    using Control = System.Windows.Forms.Control;
 
-    public static class ButtonEnumeratorExtension
+    public static class ControlEnumeratorExtension
     {
         //
         // Summary:
@@ -73,7 +74,7 @@ namespace CSUtils
         //     s represents a number less than System.Int32.MinValue or greater than System.Int32.MaxValue.
         public static void Enumerate(this Control ctrl_object, string[] strings, Action<Control, object> afterStateChange = null)
         {
-            int tb_tag = ctrl_object.Tag.Parse<int>();
+            int tb_tag = ctrl_object.Tag.ConvertWithDefault<int>();
             tb_tag = (tb_tag + 1) % strings.Length;
 
             ctrl_object.Text = strings[tb_tag];
@@ -107,7 +108,7 @@ namespace CSUtils
         //     s represents a number less than System.Int32.MinValue or greater than System.Int32.MaxValue.
         public static void Enumerate(this Control ctrl_object, string[] strings, object newTag, Action<Control, object> afterStateChange = null)
         {
-            int tb_tag = newTag.Parse<int>();
+            int tb_tag = newTag.ConvertWithDefault<int>();
 
             ctrl_object.Text = strings[tb_tag];
             ctrl_object.Tag = tb_tag;

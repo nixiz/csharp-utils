@@ -7,7 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CSUtils;
+using CSUtils.WindowsFormsControlExtensions;
+using CSUtils.ControlEnumeratorExtension;
+using CSUtils.LinkExtension;
+using CSUtils.ConvertExtension;
 
 namespace CSUtilsUsageExamples
 {
@@ -24,7 +27,7 @@ namespace CSUtilsUsageExamples
             this.MakeAll<CheckBox>(cb => cb.Checked = true);
 
             // sample usage of GetAll<T> extension to select all radiobuttons which are defaulted by their tag
-            foreach (RadioButton rb in this.GetAll<RadioButton>().Where(r => r.Tag.Parse<int>() == 0))
+            foreach (RadioButton rb in this.GetAll<RadioButton>().Where(r => r.Tag.ConvertWithDefault<int>() == 0))
             {
                 rb.Checked = true;
             }
@@ -36,7 +39,7 @@ namespace CSUtilsUsageExamples
             Button bt = sender as Button;
             string[] buttonTextArray = lbl_shift_names_basic.Text.Split(" ".ToArray(), StringSplitOptions.RemoveEmptyEntries);
             bt.Enumerate(buttonTextArray, (s, newTag) => {
-                Console.WriteLine("new tag value is {0}", newTag.Parse<int>());
+                Console.WriteLine("new tag value is {0}", newTag.ConvertWithDefault<int>());
             });
         }
 
@@ -65,7 +68,7 @@ namespace CSUtilsUsageExamples
             RadioButton rb = sender as RadioButton;
             if (!rb.Checked) return;
 
-            FontStyle newFontStyle = (FontStyle)rb.Tag.Parse<int>();
+            FontStyle newFontStyle = (FontStyle)rb.Tag.ConvertWithDefault<int>();
 
             this.MakeAll<Label>(c => {
                 c.Font = new Font(rb.Font.Name, rb.Font.Size, newFontStyle);

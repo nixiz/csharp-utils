@@ -56,8 +56,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="$(SolutionDir)\ButtonEnumerator\ButtonEnumeratorExtension.cs" />
-    <Compile Include="$(SolutionDir)\CSharpUtils\Utils.cs" />
+    <Compile Include="$(SolutionDir)\ButtonEnumerator\ControlEnumeratorExtension.cs" />
+    <Compile Include="$(SolutionDir)\CSharpUtils\ConvertExtension.cs" />
+    <Compile Include="$(SolutionDir)\CSharpUtils\WindowsFormsControlExtension.cs" />
     <Compile Include="$(SolutionDir)\LinkExtension\ControlLinkerExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

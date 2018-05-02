@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace CSUtils
+namespace CSUtils.LinkExtension
 {
-    public static class LinkExtension
+    public static class LinkControlByPropertyName
     {
         public static void Link(this object obj, string property, params object[] linkingObjects)
         {

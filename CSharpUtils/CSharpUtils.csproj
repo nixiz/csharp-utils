@@ -49,8 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConvertExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils.cs" />
+    <Compile Include="WindowsFormsControlExtension.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CSUtilDeveloper.pfx" />
