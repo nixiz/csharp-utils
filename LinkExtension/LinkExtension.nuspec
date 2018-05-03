@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>CSUtils.LinkExtension.LinkControlByPropertyName</id>
+    <version>1.0.0.1</version>
+    <title>Link Windows Forms Control objects by their property names</title>
+    <authors>ogzhnktl</authors>
+    <owners>ogzhnktl</owners>
+    <licenseUrl>https://github.com/nixiz/csharp-utils/csharp-utils/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/nixiz/csharp-utils</projectUrl>
+    <iconUrl>https://github.com/nixiz/csharp-utils/raw/master/icon/CSharpIcon.PNG</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Link Windows Forms Control objects by their property names</description>
+    <releaseNotes>first release.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>c# csharp utility link control</tags>
+  </metadata>
+</package>
