@@ -1,7 +1,8 @@
 # csharp-utils
 ## Usage Demo
 
-Useful C# extensions for windows form applications.
+Useful C# extensions for windows form applications
+
 ![](csutils_demo.gif)
 
 ## Installation Nuget Package [Download](https://www.nuget.org/packages/CSUtils.LinkExtension.LinkControlByPropertyName)
