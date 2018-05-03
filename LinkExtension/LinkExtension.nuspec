@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CSUtils.LinkExtension.LinkControlByPropertyName</id>
-    <version>1.0.0.1</version>
+    <version>1.0.0.2</version>
     <title>Link Windows Forms Control objects by their property names</title>
     <authors>ogzhnktl</authors>
     <owners>ogzhnktl</owners>
@@ -11,7 +11,7 @@
     <iconUrl>https://github.com/nixiz/csharp-utils/raw/master/icon/CSharpIcon.PNG</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Link Windows Forms Control objects by their property names</description>
-    <releaseNotes>first release.</releaseNotes>
+    <releaseNotes>.Net target framework changed from v.4.5.2 to v4.5</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>c# csharp utility link control</tags>
   </metadata>
